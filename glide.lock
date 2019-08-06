@@ -1,0 +1,12 @@
+hash: 5e84a7950c3b8c540f469221a589d5ba2843c4310b3b0cfcb2767843e080edd8
+updated: 2019-08-07T04:16:06.040300983+07:00
+imports:
+- name: github.com/BurntSushi/toml
+  version: b26d9c308763d68093482582cea63d69be07a0f0
+- name: github.com/dgrijalva/jwt-go
+  version: dbeaa9332f19a944acb5736b4456cfcc02140e29
+- name: github.com/jinzhu/gorm
+  version: 5174cc5c242a728b435ea2be8a2f7f998e15429b
+- name: github.com/labstack/echo
+  version: 0473c51f1dbd83487effce00702571d19033a6e5
+testImports: []
