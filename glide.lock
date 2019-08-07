@@ -1,12 +1,56 @@
-hash: 5e84a7950c3b8c540f469221a589d5ba2843c4310b3b0cfcb2767843e080edd8
-updated: 2019-08-07T04:16:06.040300983+07:00
+hash: 5d91822a1cc5e7a57aff4808c1b96b788a5cab616a5deb1bb3d67b249089f5a9
+updated: 2019-08-07T14:12:44.821338054+07:00
 imports:
+- name: github.com/asaskevich/govalidator
+  version: 521b25f4b05fd26bec69d9dedeb8f9c9a83939a8
 - name: github.com/BurntSushi/toml
   version: b26d9c308763d68093482582cea63d69be07a0f0
 - name: github.com/dgrijalva/jwt-go
   version: dbeaa9332f19a944acb5736b4456cfcc02140e29
+- name: github.com/dustin/go-humanize
+  version: 9f541cc9db5d55bce703bd99987c9d5cb8eea45e
 - name: github.com/jinzhu/gorm
   version: 5174cc5c242a728b435ea2be8a2f7f998e15429b
+  subpackages:
+  - dialects/postgres
+- name: github.com/jinzhu/inflection
+  version: 1c35d901db3da928c72a72d8458480cc9ade058f
 - name: github.com/labstack/echo
   version: 0473c51f1dbd83487effce00702571d19033a6e5
+  subpackages:
+  - middleware
+- name: github.com/labstack/gommon
+  version: 779b8a8b9850a97acba6a3fe20feb628c39e17c1
+  subpackages:
+  - bytes
+  - color
+  - log
+  - random
+- name: github.com/lib/pq
+  version: 3427c32cb71afc948325f299f040e53c1dd78979
+  subpackages:
+  - hstore
+  - oid
+  - scram
+- name: github.com/mattn/go-colorable
+  version: 6c0fd4aa6ec5818d5e3ea9e03ae436972a6c5a9a
+- name: github.com/mattn/go-isatty
+  version: fc9e8d8ef48496124e79ae0df75490096eccf6fe
+- name: github.com/parnurzeal/gorequest
+  version: a578a48e8d6ca8b01a3b18314c43c6716bb5f5a3
+- name: github.com/valyala/bytebufferpool
+  version: e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7
+- name: github.com/valyala/fasttemplate
+  version: dcecefd839c4193db0d35b88ec65b4c12d360ab0
+- name: golang.org/x/crypto
+  version: 358f15eacb587b056fc93273b930314a5cda12fe
+  subpackages:
+  - acme
+  - acme/...
+  - acme/autocert
+  - bcrypt
+- name: golang.org/x/sys
+  version: e312636bdaa2fac4f0acde9d17ab9fbad2b4ad10
+  subpackages:
+  - unix
 testImports: []

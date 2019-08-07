@@ -1,0 +1,11 @@
+[app]
+name = "tax_calculator"
+port = ":3000"
+baseUrl = "http://localhost:3000"
+
+[database]
+host = "172.17.0.3"
+port = "5432"
+database = "tax"
+user = "pose"
+password = "pose"

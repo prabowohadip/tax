@@ -18,9 +18,11 @@ func Routing() {
 		})
 	})
 
-	//v1 := e.Group("/v1")
-	//order := v1.Group("/order")
+	v1 := e.Group("/v1")
+	order := v1.Group("/order")
 
+	order.POST("", CreateOrder)
+	order.GET("", ListOrder)
 
 	e.Logger.Fatal(e.Start(config.Config.App.Port))
 }

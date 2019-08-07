@@ -3,10 +3,14 @@ package model
 import "time"
 
 type OrderItemSchema struct {
-	ID        uint 		 `gorm:"primary_key" json:"id"`
+	BaseModel
 	Name      string     `gorm:"not null"    json:"name"`
 	TaxCode   string     `gorm:"not null"    json:"tax_code"`
 	Price     float64    `gorm:"not null"    json:"price"`
+}
+
+type BaseModel struct {
+	ID        uint 		 `gorm:"primary_key" json:"id"`
 	CreatedAt time.Time	 `json:"created_at,omitempty"`
 }
 
@@ -28,8 +32,8 @@ type OrderItemTax struct {
 	Name       string  `json:"name"`
 	TaxCode    string  `json:"tax_code"`
 	Price      float64 `json:"price"`
-	Type       string  `json:"price"`
-	Refundable bool    `json:"price"`
-	Tax        float64 `json:"price"`
-	Amount     float64 `json:"price"`
+	Type       string  `json:"type"`
+	Refundable bool    `json:"refundable"`
+	Tax        float64 `json:"tax"`
+	Amount     float64 `json:"amount"`
 }

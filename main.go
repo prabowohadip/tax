@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/prabowohadip/tax/config"
+	"github.com/prabowohadip/tax/controller"
 	"github.com/prabowohadip/tax/model"
 	"sync"
 )

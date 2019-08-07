@@ -3,6 +3,8 @@ package config
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
+
 	"sync"
 )
 
@@ -16,12 +18,17 @@ var 	instanceDB *DB
 // GetInstanceDb this connection for database
 func GetInstanceDb() *gorm.DB {
 	onceDbPostg.Do(func() {
-		dbConfig := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
+		dbConfig := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
 			Config.Database.Host, Config.Database.Port, Config.Database.User, Config.Database.Password, Config.Database.Database)
-		dbConnection, _ := gorm.Open("postgres", dbConfig)
-		fmt.Println("Connected to " + dbConfig)
-		instanceDB = &DB{Db: dbConnection}
-		dbConnection.LogMode(true)
+		dbConnection, e := gorm.Open("postgres", dbConfig)
+		if e == nil {
+			fmt.Println("Connected to " + dbConfig)
+			instanceDB = &DB{Db: dbConnection}
+			dbConnection.LogMode(true)
+		}else {
+			panic(e)
+		}
+
 	})
 	return instanceDB.Db
 }
